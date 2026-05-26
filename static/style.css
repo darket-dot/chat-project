@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: #fff7ed;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    padding: 5rem 1rem 6rem;
+    overflow-y: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1625f9;
+    color: #fff;
+    padding: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#form {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.8rem;
+    background: #ffffff;
+}
+
+
+
+
+.btns {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.btn {
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+
+.btn:hover {
+    background: #fff;
+    color: #1625f9;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: 0.9;
+}
+
+
+
+
+#input {
+    flex: 1;
+    height: 3.2rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border-radius: 999px;
+    border: 1px solid #aac7fe;
+    outline: none;
+    background: #fff;
+    color: #12347c;
+}
+
+#input:focus {
+    border-color: #1625f9;
+}
+
+#submit {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: none;
+    background: #1625f9;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+#submit::before {
+    content: "➤";
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#submit:hover {
+    background: #0c5aea;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+li {
+    max-width: 70%;
+    padding: 0.9rem 1.1rem;
+    border-radius: 1rem;
+    background: #d5ddff;
+    color: #12347c;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+li:nth-child(even) {
+    align-self: flex-end;
+    background: #1625f9;
+    color: #fff;
+}
+
+.submit {
+    height: 3.2rem;
+    padding: 0 1.4rem;
+    border-radius: 999px;
+    border: none;
+    background: #1625f9;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit:hover {
+    background: #0c65ea;
+    transform: translateY(-1px);
+}
+
+.submit:active {
+    transform: scale(0.96);
+}
