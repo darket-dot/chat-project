@@ -22,7 +22,8 @@ const server = http.createServer((req, res) => {
 
         switch (req.url) {
             case "/style.css": return res.end(styleFile)
-                res.writeHead(200, {"Content-Type": "text/css"})
+                res.writeHead(200, { "Content-Type": "text/css" })
+                return res.end(styleFile)
             case "/auth.js": return res.end(authScript)
             case "/register.css": return res.end(registerstyleFile)
             case "/register": return res.end(registerHtmlFile)
