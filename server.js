@@ -21,13 +21,19 @@ const server = http.createServer((req, res) => {
     if (req.method === "GET") {
 
         switch (req.url) {
-            case "/style.css": return res.end(styleFile)
+            case "/style.css":
                 res.writeHead(200, { "Content-Type": "text/css" })
                 return res.end(styleFile)
             case "/auth.js": return res.end(authScript)
-            case "/register.css": return res.end(registerstyleFile)
+            case "/register.css":
+                res.writeHead(200, { "Content-Type": "text/css" })
+                return res.end(registerstyleFile)
+
             case "/register": return res.end(registerHtmlFile)
-            case "/login.css": return res.end(loginstyleFile)
+            case "/login.css":
+                res.writeHead(200, { "Content-Type": "text/css" })
+                return res.end(loginstyleFile)
+                
             case "/login": return res.end(loginHtmlFile)
             case "/logout": return logoutUser(req, res)
             default: return guarded(req, res)
